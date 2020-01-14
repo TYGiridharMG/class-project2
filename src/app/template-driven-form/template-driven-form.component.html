@@ -1,0 +1,55 @@
+<br>
+<form class="col-md-4 offset-md-4" #form='ngForm' (ngSubmit)='submitForm(form)'>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" id="name" pattern="[A-Za-z]*" minlength="5" #name='ngModel' ngModel required>
+        <div *ngIf='name && name.touched && name.invalid' class='alert alert-danger'>
+            Enter atleast 5 charecters
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" class="form-control" id="gender" pattern="[MF]?" #email='ngModel' ngModel required>
+        <div *ngIf='gender && gender.touched && gender.invalid' class='alert alert-danger'>
+            Enter M or F
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" pattern="[A-Za-z]+[A-Za-z0-9]*[@][A-Za-z]+[.][A-Za-z]+" #email='ngModel' ngModel required>
+        <div *ngIf='email && email.touched && email.invalid' class='alert alert-danger'>
+            Pattern should be example@domin.com
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="date">Email address</label>
+        <input type="date" name="date" class="form-control" id="date" #date='ngModel' min='{{todaysDate | date : "yyyy-MM-dd"}}' ngModel required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="{{passwordType}}" name="password" class="form-control" id="password" pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,20})$" #password='ngModel' ngModel required>
+        <div *ngIf='password && password.touched && password.invalid' class='alert alert-danger'>
+            Enter atleast 8 charecters
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" (click)='showPassword()' class="btn btn-primary">Show or Hide Password</button>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]='form.invalid'>Register</button>
+</form>
+
+<div class="list-group col-md-4 offset-md-4 alert-primary alert text-center" *ngIf='user' style="margin-top: 10px; padding-top: 10px;">Form Data</div>
+<ul class="list-group col-md-4 offset-md-4" *ngIf='user' style="margin-top: 10px; padding-top: 10px; margin-bottom: 10px; padding-bottom: 10px;">
+    <li class="list-group-item">Name:
+        <div class="float-right">{{user.name}}</div>
+    </li>
+    <li class="list-group-item">Gender:
+        <div class="float-right">{{user.gender}}</div>
+    </li>
+    <li class="list-group-item">Email:
+        <div class="float-right">{{user.email}}</div>
+    </li>
+    <li class="list-group-item">Password:
+        <div class="float-right">{{user.password}}</div>
+    </li>
+</ul>

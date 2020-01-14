@@ -1,0 +1,16 @@
+<h2>The service data is {{data.var}}</h2>
+<p appColor>This is NG If Directive</p>
+<h1>Type the answer</h1>
+<h3>10 + 20</h3>
+<div class="form-group">
+    <input type="number" class="form-control" name="ans" id="" placeholder="answer" [(ngModel)]="ans">
+</div>
+<div *ngIf='ans'>
+    <div *ngIf='ans===30; then ifBlock else elseBlock'></div>
+    <ng-template #ifBlock>
+        <p>Correct Answer</p>
+    </ng-template>
+    <ng-template #elseBlock>
+        <p>Wrong Answer</p>
+    </ng-template>
+</div>

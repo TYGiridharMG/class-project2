@@ -1,0 +1,18 @@
+<p appColor>This is Data Binding component</p>
+<h1 style="color: red;">{{name}}</h1>
+<h2>Sume of 10 and 20 is {{10+20}} using <b style="color:tomato">Interpolation</b></h2>
+<h2 [style.color]='flag?"blue":"green"'>Hi Style Binding</h2>
+<h3 [class.blink]="flag" [class.notblink]="!flag">Hi Class Binding</h3>
+<button type="button" class="btn btn-primary" (click)='clickMe()'>Click Me</button>
+<br>
+<div class="form-group col-md-4 offset-md-4">
+    <label for="">Some Text to print using keyup event binding</label>
+    <input type="text" class="form-control" #myInput (keyup)='changeMe(myInput)'>
+    <h3>{{value}}</h3>
+</div>
+<div class="form-group col-md-4 offset-md-4">
+    <label for="">Some Text to print using two way binding</label>
+    <input type="text" class="form-control" name="twowaydata" [(ngModel)]='twowaydata' id="">
+    <h3>{{twowaydata}}</h3>
+</div>
+<img [src]="imageUrl" height="{{h}}" width="{{w}}" alt="" class="offset-md-4">

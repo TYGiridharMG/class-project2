@@ -1,0 +1,14 @@
+<h2>The service data is {{data.var}}</h2>
+<p appColor>This is NG Switch Directice</p>
+<div class="form-group col-md-2">
+    <label for="">Choose The Gender</label>
+    <select class="form-control" name="gender" id="" [(ngModel)]="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+<div [ngSwitch]='gender'>
+    <div *ngSwitchCase='"Male"'>The Gender is Male</div>
+    <div *ngSwitchCase='"Female"'>The Gender is Female</div>
+    <div *ngSwitchDefault>The Gender is not choosen</div>
+</div>

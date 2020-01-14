@@ -1,0 +1,8 @@
+<p appColor>Child Component!</p>
+<label class="list-group col-md-4 offset-md-4">@Input</label>
+<ul class="list-group col-md-3 offset-md-4" *ngIf='dataFromParent'>
+    <li class="list-group-item" appTable>Name: <span class="float-right">{{dataFromParent.name}}</span></li>
+    <li class="list-group-item" appTable>Salary: <span class="float-right">{{dataFromParent.salary}}</span></li>
+    <li class="list-group-item" appTable>Gender: <span class="float-right">{{dataFromParent.gender}}</span></li>
+    <li class="list-group-item" appTable>Designation: <span class="float-right">{{dataFromParent.designation}}</span></li>
+</ul>

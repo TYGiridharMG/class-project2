@@ -1,0 +1,11 @@
+<form class="form-group" #form>
+    <div class="col-md-6 offset-md-3 display-4 mt-5 pt-5">
+        <label for="">Enter Id</label>
+        <input type="text" class="form-control" #id placeholder="Enter ID">
+        <label for="">Enter Name</label>
+        <input type="text" class="form-control" #name placeholder="Enter Name">
+        <label for="">Enter Image-Url</label>
+        <input type="text" class="form-control" #imageUrl placeholder="Enter Image URL">
+        <button class="btn btn-primary" (click)='navigate(id.value, name.value, imageUrl.value)'>Navigate</button>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+<p appColor>Parent Component!</p>
+<app-child [dataFromParent]='employee' (childEvent)='dataFromChild=$event'></app-child>
+<label class="list-group col-md-4 offset-md-4">@Output</label>
+<ul class="list-group col-md-3 offset-md-4">
+    <li class="list-group-item" appTable>Name: <span class="float-right">{{dataFromChild.name}}</span></li>
+    <li class="list-group-item" appTable>Gender: <span class="float-right">{{dataFromChild.gender}}</span></li>
+    <li class="list-group-item" appTable>Marks: <span class="float-right">{{dataFromChild.marks}}</span></li>
+    <li class="list-group-item" appTable>Course: <span class="float-right">{{dataFromChild.course}}</span></li>
+</ul>

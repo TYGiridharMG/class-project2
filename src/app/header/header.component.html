@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" routerLink="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/data-binding">Data Binding</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/parent">@Input-@Output</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/life-cycle">Life Cycle</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/router">Router</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" rou terLink="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Directives</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" routerLink="/directives/ng-for-directive">Ng For Directive</a>
+                    <a class="dropdown-item" routerLink="/directives/ng-if-directive">Ng If Directice</a>
+                    <a class="dropdown-item" routerLink="/directives/ng-switch-directive">Ng Switch Directice</a>
+                    <a class="dropdown-item" routerLink="/directives/attribute-directive">Attribute Directice</a>
+                </div>
+            </li>
+        </ul>
+        <a class="nav-link float-right" routerLink="/reactive-form">Reactive Form</a>
+        <a class="nav-link float-right" routerLink="/template-driven-form">Template Driven Form</a>
+    </div>
+</nav>

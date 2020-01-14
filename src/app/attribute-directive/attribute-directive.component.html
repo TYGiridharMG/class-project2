@@ -1,0 +1,9 @@
+<h2>The service data is {{data.var}}</h2>
+<p appColor>This is Attribute Directive</p>
+<h2 [ngStyle]='{
+    "color" : flag ? "blue" : "red"
+}'>Hi Style Binding</h2>
+<h3 [ngClass]='{
+    "bg-primary" : flag,
+    "bg-danger" : !flag
+}'>Hi Class Binding</h3>
